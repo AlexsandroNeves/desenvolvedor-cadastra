@@ -8,3 +8,19 @@ export interface Product {
   size: Array<string>;
   date: string;
 }
+
+export interface ItemColor {
+  color: string
+}
+
+export interface ItemSize {
+  size: string[];
+}
+
+export interface Cart {
+  id: string;
+  name: string;
+  qtd: string;
+  price: string;
+  image: string;
+}

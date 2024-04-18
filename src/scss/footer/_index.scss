@@ -1,0 +1,13 @@
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 33px;
+  background-color: $sec-color;
+  
+  p{
+    font-family: $main-font;
+    font-size: $f14;   
+    color: #fff; 
+  }
+}

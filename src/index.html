@@ -1,18 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desenvolvedor Cadastra</title>
+  <link href="https://cadastra.com/img/site/favicon-dark.png" rel="icon" media="(prefers-color-scheme: dark)">
+  <link href="https://cadastra.com/img/site/favicon-light.png" rel="icon" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#FB953E">
+  <title>Somos uma empresa global de soluções em marketing, estratégia de negócios, tecnologia, consultoria, dados e
+    analytics com mais de 20 anos de experiência.</title>
+
+  <!-- start fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <!-- end fonts  -->
+
   <link rel="stylesheet" href="main.css" />
 </head>
 
-<body>
+<body class="category">
+  <header class="header">
+    <div class="container">
+      <h1 aria-label="Cadastra">
+        <a href="https://cadastra.com/pt-br" target="_blank">
+          <div class="header__logo"></div>
+        </a>
+      </h1>
+      <div class="header__cart"></div>
+    </div>
+  </header>
+  
+  <div class="carrinho__overlay"></div>
+  
+  <div class="carrinho">
+    <div class="carrinho__top">
+      <h3>Meu Carrinho</h3>
+      <span class="carrinho__close">&times;</span>
+    </div>
+    <ul></ul>
+  </div>
 
+
+  <main class="main">
+    <div class="container">
+      <div class="wrap-content">
+        <aside class="sidebar">
+          <h2 class="title__category">Blusas</h2>
+
+          <div class="top__filter">
+            <h3 class="top__filter--title">Filtrar</h3>
+            <span class="top__filter--close">&times;</span>
+          </div>
+
+          <div class="filter">
+            <div class="filter__item filter__item--color">
+              <div class="filter__item--top">
+                <h3 class="filter__item--title">Cores</h3>
+                <span class="seta"></span>
+              </div>
+              <div class="sub">
+                <ul></ul>
+                <div class="filter__more">
+                  Ver todas as cores
+                </div>
+              </div>
+            </div>
+            <div class="filter__item filter__item--size">
+              <div class="filter__item--top">
+                <h3 class="filter__item--title">Tamanhos</h3>
+                <span class="seta"></span>
+              </div>
+              <div class="sub">
+                <ul></ul>
+              </div>
+            </div>
+            <div class="filter__item filter__item--price">
+              <div class="filter__item--top">
+                <h3 class="filter__item--title">Faixa de Preço</h3>
+                <span class="seta"></span>
+              </div>
+              <div class="sub">
+                <ul>
+                  <li>
+                    <label>
+                      <input type="checkbox" value="0-50" />
+                      <span>de R$0 até R$50</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="checkbox" value="51-150" />
+                      <span>de R$51 até R$150</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="checkbox" value="151-300" />
+                      <span>de R$151 até R$300</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="checkbox" value="301-500" />
+                      <span>de R$301 até R$500</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="checkbox" value="500" />
+                      <span>a partir de R$ 500</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="buttons">
+            <button class="buttons__item--aplicar">Aplicar</button>
+            <button class="buttons__item--limpar">Limpar</button>
+          </div>
+        </aside>
+
+        <h2 class="title__category mob">Blusas</h2>
+        <div class="filter__mob">
+          <div class="filter__mob__item filter__mob__item--filtrar">
+            Filtrar
+          </div>
+          <div class="filter__mob__item filter__mob__item--ordenar">
+            Ordenar
+          </div>
+        </div>
+
+        <div class="filter__order__mob">
+          <div class="top__filter">
+            <h3 class="top__filter--title">Ordenar</h3>
+            <span class="top__filter--close">&times;</span>
+          </div>
+          <ul class="filter__order__mob--list">
+            <li>Mais recente</li>
+            <li>Maior preço</li>
+            <li>Menor preço</li>
+          </ul>
+        </div>
+
+        <div class="listProducts">
+          <div class="listProducts__filterOrder">
+            <div class="fake-select">
+              <div class="selected">
+                <div>Ordenar por:</div>
+              </div>
+              <div class="sub">
+                <div>Mais recentes</div>
+                <div>Menor preço</div>
+                <div>Maior preço</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="listProducts__list"> 
+            <ul></ul>
+            <button class="btn load-more">Carregar mais</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>CADASTRA: Implantação de E-commerce VTEX</p>
+  </footer>
 </body>
-<h1>Desafio Cadastra</h1>
 
 <script src="bundle.js"></script>
 

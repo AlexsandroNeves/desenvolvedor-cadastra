@@ -1,0 +1,4 @@
+.chk input:checked+span {
+  background-color: $main-color;
+  outline: 1px solid $main-color;
+}

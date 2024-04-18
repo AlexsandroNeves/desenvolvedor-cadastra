@@ -1,0 +1,46 @@
+@import './variables';
+@import '../configs/variables.scss';
+
+
+.header {
+  border-bottom: 1px solid #c7c7c7;
+  height: 66px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  &__logo {
+    display: inline-block;
+    background-image: url($logoCadastra);
+    width: 166px;
+    height: 25px;
+  }
+
+  &__cart {
+    display: inline-block;
+    background-image: url($cart);
+    width: 17px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+
+    .qtd__products {
+      border-radius: 100%;
+      background-color: $main-color;
+      color: #fff;
+      text-align: center;
+      padding: 3px;
+      width: max-content;
+      min-width: 18px;
+      height: 18px;
+      font-size: $f12;
+      font-family: $main-font;
+      position: absolute;
+      top: 8px;
+      right: -10px;
+    }
+  }
+}

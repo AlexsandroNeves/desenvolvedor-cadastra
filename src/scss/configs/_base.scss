@@ -1,0 +1,18 @@
+html,
+body{
+  font-size: 16px;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Cabeçalho, Conteúdo Principal, Rodapé */
+  min-height: 100vh; 
+}
+
+.container{
+  max-width: 1180px;
+  width: 100%;
+  padding: 0 16px;
+  margin: 0 auto; 
+}
+
+.hidden{
+  display: none;
+}

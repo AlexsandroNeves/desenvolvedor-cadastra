@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+.listProducts {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+
+  .filter-info{
+    text-align: center;
+    color: #000;
+    display: block;
+    width: 100%;
+    font-family: $main-font;
+  }
+
+  &__filterOrder {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    @include fakeSelect;
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__list {
+    margin-top: 108px;
+
+    @media (max-width: 1024px){
+      margin-top: 34px;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 728px;
+      margin: 0 auto;
+
+      @media (max-width: 1024px) {
+        max-width: 100%;
+        justify-content: center;
+      }
+
+      li {
+        margin-bottom: 40px;
+        cursor: pointer;
+
+        @include btnComprar;
+
+        img {
+          max-width: 100%;
+          display: block;
+          margin: 0 auto;
+        }
+
+        @media (max-width: 1024px) {
+          width: 30%;
+          margin: 0 2% 40px;
+        }
+
+        @media (max-width: 720px) {
+          width: 46%;
+          margin: 0 0px 40px;
+        }
+
+        @media (max-width: 1024px) {
+          margin: 0;
+        }
+
+        &:nth-child(3n+2) {
+          margin: 0 64px;
+
+          @media (max-width: 1024px) {
+            margin: 0;
+          }
+        }
+
+        &:nth-child(2n+2) {
+
+          @media (max-width: 720px) {
+            width: 46%;
+            margin: 0 0 18px 18px;
+          }
+        }
+
+        .product {
+
+          &__parcelamento,
+          &__title,
+          &__price {
+            font-family: $main-font;
+            text-align: center;
+            text-transform: uppercase;
+          }
+
+          &__title {
+            font-size: $f14;
+            font-weight: 400;
+            line-height: 19.07px;
+            color: $sec-color;
+            margin: 10px 0;
+          }
+
+          &__parcelamento,
+          &__price {
+            font-size: $f16;
+            font-weight: 700;
+            line-height: 21.79px;
+          }
+
+          &__parcelamento {
+            font-weight: 400;
+            color: #666;
+            margin: 4px 0 14px;
+          }
+        }
+      }
+    }
+
+    .btn {
+      &.load-more {
+        margin: 30px auto 35px;
+      }
+
+      @include btn;
+    }
+  }
+}

@@ -1,0 +1,188 @@
+@mixin checkbox() {
+  input[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+  }
+
+  input[type=checkbox]:before {
+    content: "";
+    display: block;
+    position: relative;
+    width: 14px;
+    height: 14px;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #afafaf;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+  }
+
+  span {
+    padding-left: 10px;
+    position: relative;
+    top: 3px;
+    font-family: $main-font;
+    font-size: $f14;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: left;
+    cursor: pointer;
+
+  }
+
+  input[type=checkbox]:checked:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 0;
+    left: 0;
+    background-color: $main-color;
+    outline: $main-color;
+    outline: 1px solid #afafaf;
+  }
+
+  input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: solid white;
+    border-width: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+@mixin fakeSelect() {
+  .fake-select {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+    border: 1px solid #808080;
+    width: 142px;
+    position: relative;
+
+    &:hover {
+      height: 100%;
+
+      .sub {
+        display: block;
+      }
+    }
+
+    .selected {
+      >div {
+        display: flex;
+        width: 142px;
+        height: 42px;
+        align-items: center;
+        font-size: $f16;
+        font-weight: 400;
+        line-height: 11.72px;
+        text-align: left;
+        padding: 0 14px;
+        position: relative;
+        cursor: pointer;
+
+        &:after {
+          content: "";
+          display: inline-block;
+          background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L7 7L13 1' stroke='%23333333' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+          background-repeat: no-repeat;
+          width: 14px;
+          height: 8px;
+          position: absolute;
+          top: 17px;
+          right: 10px;
+        }
+      }
+    }
+
+    .sub {
+      display: none;
+
+      div {
+        display: flex;
+        align-items: center;
+        width: 142px;
+        height: 42px;
+        color: #000;
+        padding: 14px;
+        font-size: $f16;
+        font-weight: 400;
+        line-height: 21.79px;
+        text-align: left;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $main-color;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@mixin btn() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: $main-font;
+  font-size: $f14;
+  font-weight: 700;
+  line-height: 19.07px;
+  text-align: left;
+  background-color: $main-color;
+  width: 175px;
+  max-width: 100%;
+  height: 35px;
+  border: 0;
+  padding: 0 12px;
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    filter: brightness(0.8)
+  }
+}
+
+@mixin btnComprar() {
+  .btn-comprar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 195px;
+    max-width: 100%;
+    height: 33px;
+    margin: 0 auto;
+    font-family: $main-font;
+    font-size: $f14;
+    font-weight: 700;
+    line-height: 19.07px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: $sec-color;
+    opacity: 0.9;
+    border: 0;
+    transition: color 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #000;
+      opacity: 1;
+    }
+  }
+}

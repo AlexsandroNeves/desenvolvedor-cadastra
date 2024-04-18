@@ -3,9 +3,8 @@
   "description": "Desafio da Cadastra para novos colaboradores",
   "main": "index.js",
   "scripts": {
-    "start": " npm-run-all --parallel dev cart server",
     "dev": "gulp",
-    "cart": "json-server ./cart.json --port 5001",
+    "serve1": "json-server ./cart.json --port 5010",
     "server": "json-server ./db.json --port 5000"
   },
   "repository": {

@@ -327,12 +327,24 @@ function fecharFiltroMobile() {
   });
 }
 
+
+
 function filtroOrdenacaoMobile() {
   let elemFiltrar = document.querySelector('.filter__mob__item--ordenar');
 
   elemFiltrar.addEventListener('click', function () {
     let filtroOrdenacao = document.querySelector('.filter__order__mob') as HTMLElement;
     filtroOrdenacao.style.display = 'block';
+
+    const listaOrdenacao = document.querySelector('.filter__order__mob--list');
+
+    // Adiciona um listener para o clique nos itens da lista
+    listaOrdenacao?.addEventListener('click', function(event) {
+      const opcaoSelecionada = (event.target as HTMLElement).textContent?.toLowerCase();
+      if (opcaoSelecionada) {
+        obterProdutos(); // Chama a função para obter os produtos (aqui você pode chamar a função correta, como ordenarProdutos)
+      }
+    });
   });
 }
 

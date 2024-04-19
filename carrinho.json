@@ -1,0 +1,11 @@
+{
+  "cart": [
+    {
+      "id": "1",
+      "name": "Camiseta Mescla",
+      "price": "28.8",
+      "image": "/img/img_2.png",
+      "qtd": "2"
+    }
+  ]
+}
